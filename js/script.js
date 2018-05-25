@@ -134,8 +134,10 @@ var keyAction = function (event) {
     case 13: // Enter
     case 32: // Space
       if (check()) {
+        $('#combo').innerText = parseInt($('#combo').innerText) + 1;
         next();
       } else {
+        $('#combo').innerText = 0;
         redo();
       }
       break;
